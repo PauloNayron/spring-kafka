@@ -29,4 +29,8 @@ public class CustomerMessage {
         this.birthdate = customer.birthdate();
         this.address = new AddressMessage(customer.address());
     }
+
+    public Customer toEntity() {
+        return null;
+    }
 }

@@ -14,3 +14,11 @@ spring:
 topic:
   test: topic_test
   new-customer: topic_new_customer
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
