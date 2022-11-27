@@ -1,4 +1,4 @@
-package com.nayron.springkafka.domain.service;
+package com.nayron.springkafka.infraestructure.topic;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Log4j2
 @Service
-public class MessageService {
+public class PublisherKafka {
     @Value("${topic.test}") private String topicTest;
     @Autowired private KafkaTemplate<String, String> kafkaTemplate;
 

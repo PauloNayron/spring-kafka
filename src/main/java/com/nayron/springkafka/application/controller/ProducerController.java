@@ -1,6 +1,6 @@
 package com.nayron.springkafka.application.controller;
 
-import com.nayron.springkafka.domain.service.MessageService;
+import com.nayron.springkafka.infraestructure.topic.PublisherKafka;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class ProducerController {
 
-    private MessageService messageService;
+    private PublisherKafka publisherKafka;
 
     @PostMapping
     public ResponseEntity<String> publishMessage(@RequestBody String message) {
-        messageService.sendMessage(message);
+        publisherKafka.sendMessage(message);
         return ResponseEntity.accepted().body(message);
     }
 }

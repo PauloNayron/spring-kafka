@@ -4,6 +4,12 @@ spring:
       bootstrap-servers: ${URL_KAFKA}
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      bootstrap-servers: ${URL_KAFKA}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      group-id: group_id
+      auto-offset-reset: earliest
 
 topic:
   test: topic_test
