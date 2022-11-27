@@ -13,3 +13,4 @@ spring:
 
 topic:
   test: topic_test
+  new-customer: topic_new_customer
